@@ -152,11 +152,46 @@ export const Navigation = () => {
         >
           <ChevronsLeft className="h-6 w-6" />
         </div>
+
         <div>
-         
+            <p>Action items</p>
+          {/* <UserItem />
+          <Item
+            label="Search"
+            icon={Search}
+            isSearch
+            onClick={search.onOpen}
+          />
+          <Item
+            label="Settings"
+            icon={Settings}
+            onClick={settings.onOpen}
+          />
+          <Item
+            onClick={handleCreate}
+            label="New page"
+            icon={PlusCircle}
+          /> */}
         </div>
         <div className="mt-4">
-          
+        <p>Documents</p>
+          {/* <DocumentList />
+          <Item
+            onClick={handleCreate}
+            icon={Plus}
+            label="Add a page"
+          /> */}
+          {/* <Popover>
+            <PopoverTrigger className="w-full mt-4">
+              <Item label="Trash" icon={Trash} />
+            </PopoverTrigger>
+            <PopoverContent
+              className="p-0 w-72"
+              side={isMobile ? "bottom" : "right"}
+            >
+              <TrashBox />
+            </PopoverContent>
+          </Popover> */}
         </div>
         <div
           onMouseDown={handleMouseDown}
@@ -172,16 +207,16 @@ export const Navigation = () => {
           isMobile && "left-0 w-full"
         )}
       >
-        {!!params.documentId ? (
+        {/* {!!params.documentId ? (
           <Navbar
             isCollapsed={isCollapsed}
             onResetWidth={resetWidth}
           />
-        ) : (
+        ) : ( */}
           <nav className="bg-transparent px-3 py-2 w-full">
             {isCollapsed && <MenuIcon onClick={resetWidth} role="button" className="h-6 w-6 text-muted-foreground" />}
           </nav>
-        )}
+        {/* )} */}
       </div>
     </>
   )
