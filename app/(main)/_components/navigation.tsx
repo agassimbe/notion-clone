@@ -25,7 +25,7 @@ import { api } from "@/convex/_generated/api";
 // import { useSearch } from "@/hooks/use-search";
 // import { useSettings } from "@/hooks/use-settings";
 
-// import { UserItem } from "./user-item";
+import { UserItem } from "./user-item";
 // import { Item } from "./item";
 // import { DocumentList } from "./document-list";
 // import { TrashBox } from "./trash-box";
@@ -154,9 +154,8 @@ export const Navigation = () => {
         </div>
 
         <div>
-            <p>Action items</p>
-          {/* <UserItem />
-          <Item
+          <UserItem />
+          {/* <Item
             label="Search"
             icon={Search}
             isSearch
