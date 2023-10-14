@@ -38,6 +38,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Initilaliser le projet
 -npx create-next-app@latest notion-clone
 -npx shadcn-ui@latest init
+## Folders setup
+
+## Landing page
+
+## Authentication & Database
+-npm install convex
+-npx convex dev
+-authentification avec clerk
+
 
 ## convex
 Convex est un moyen nouveau, amusant et extrêmement productif de créer des backends pour vos applications full-stack en utilisant 100 % TypeScript. Lançons donc un exemple d'application opérationnelle en quelques minutes. Ensuite, nous explorerons son fonctionnement, l'améliorerons ensemble et, en cours de route, apprendrons les bases de la création de vos propres projets dans Convex.
