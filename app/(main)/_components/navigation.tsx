@@ -13,32 +13,32 @@ import { useParams, usePathname, useRouter } from "next/navigation";
 import { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useMutation } from "convex/react";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
 import { api } from "@/convex/_generated/api";
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-} from "@/components/ui/popover";
-import { useSearch } from "@/hooks/use-search";
-import { useSettings } from "@/hooks/use-settings";
+// import {
+//   Popover,
+//   PopoverTrigger,
+//   PopoverContent,
+// } from "@/components/ui/popover";
+// import { useSearch } from "@/hooks/use-search";
+// import { useSettings } from "@/hooks/use-settings";
 
-import { UserItem } from "./user-item";
-import { Item } from "./item";
-import { DocumentList } from "./document-list";
-import { TrashBox } from "./trash-box";
-import { Navbar } from "./navbar";
+// import { UserItem } from "./user-item";
+// import { Item } from "./item";
+// import { DocumentList } from "./document-list";
+// import { TrashBox } from "./trash-box";
+// import { Navbar } from "./navbar";
 
 export const Navigation = () => {
   const router = useRouter();
-  const settings = useSettings();
-  const search = useSearch();
+//   const settings = useSettings();
+//   const search = useSearch();
   const params = useParams();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const create = useMutation(api.documents.create);
+  //const create = useMutation(api.documents.create);
 
   const isResizingRef = useRef(false);
   const sidebarRef = useRef<ElementRef<"aside">>(null);
@@ -122,14 +122,14 @@ export const Navigation = () => {
   }
 
   const handleCreate = () => {
-    const promise = create({ title: "Untitled" })
-      .then((documentId) => router.push(`/documents/${documentId}`))
+    // const promise = create({ title: "Untitled" })
+    //   .then((documentId) => router.push(`/documents/${documentId}`))
 
-    toast.promise(promise, {
-      loading: "Creating a new note...",
-      success: "New note created!",
-      error: "Failed to create a new note."
-    });
+    // toast.promise(promise, {
+    //   loading: "Creating a new note...",
+    //   success: "New note created!",
+    //   error: "Failed to create a new note."
+    // });
   };
 
   return (
@@ -153,42 +153,10 @@ export const Navigation = () => {
           <ChevronsLeft className="h-6 w-6" />
         </div>
         <div>
-          <UserItem />
-          <Item
-            label="Search"
-            icon={Search}
-            isSearch
-            onClick={search.onOpen}
-          />
-          <Item
-            label="Settings"
-            icon={Settings}
-            onClick={settings.onOpen}
-          />
-          <Item
-            onClick={handleCreate}
-            label="New page"
-            icon={PlusCircle}
-          />
+         
         </div>
         <div className="mt-4">
-          <DocumentList />
-          <Item
-            onClick={handleCreate}
-            icon={Plus}
-            label="Add a page"
-          />
-          <Popover>
-            <PopoverTrigger className="w-full mt-4">
-              <Item label="Trash" icon={Trash} />
-            </PopoverTrigger>
-            <PopoverContent
-              className="p-0 w-72"
-              side={isMobile ? "bottom" : "right"}
-            >
-              <TrashBox />
-            </PopoverContent>
-          </Popover>
+          
         </div>
         <div
           onMouseDown={handleMouseDown}
