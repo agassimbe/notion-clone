@@ -26,6 +26,7 @@ import { api } from "@/convex/_generated/api";
 // import { useSettings } from "@/hooks/use-settings";
 
 import { UserItem } from "./user-item";
+import { Item } from "./item";
 // import { Item } from "./item";
 // import { DocumentList } from "./document-list";
 // import { TrashBox } from "./trash-box";
@@ -156,22 +157,24 @@ export const Navigation = () => {
 
         <div>
           <UserItem />
-          {/* <Item
+           {/* <Item
             label="Search"
             icon={Search}
             isSearch
-            onClick={search.onOpen}
+            onClick={() => {}}
+            // onClick={search.onOpen}
           />
           <Item
             label="Settings"
             icon={Settings}
             onClick={settings.onOpen}
-          />
+          /> */}
           <Item
-            onClick={handleCreate}
+            onClick={() => {}}
             label="New page"
             icon={PlusCircle}
-          /> */}
+          /> 
+          
         </div>
         <div className="mt-4">
           {documentss?.map((document) => (
